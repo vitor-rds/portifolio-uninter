@@ -161,6 +161,9 @@ footer {
     .apresentacao .imagem {
         margin-top: 20px;
     }
+    /*o menu estava quebrando no cell*/
+    .menu li a {
+        font-size: 0.9em; 
 }
 
 
