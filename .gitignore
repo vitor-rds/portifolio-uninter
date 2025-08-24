@@ -1,0 +1,7 @@
+*.env
+config.php
+*.key
+*.pem
+backup/
+temp/
+

@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/* cores q escolhi no adobe */
+:root {
+    --cor1: #96d8d9;
+    --cor2: #7db4b5;
+    --cor3: #9adfe0;
+    --cor4: #829494;
+    --cor5: #4f7273;
+    --cor6: #374f4f;
+}
+
+/* zerando tudo antes de começar */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--cor5);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor3);
+}
+
+
+
+header{
+
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor6);
+}
+
+
+
+header > h1{
+    font-size: 3em;
+    
+}
+
+/*uma sombra leve*/
+h1, h3, h2{
+    color: white;
+    font-size: 1em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+
+}
+
+.apresentacao .texto h3 {
+   margin-top: 10px;
+}
+
+
+
+nav {
+    text-align: left;
+}
+
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*limpando os links e dpois colocar um hover*/
+a {
+    text-decoration: none;
+    color: var(--cor3); 
+    transition: color 0.3s;
+}
+
+a:hover {
+    background-color: var(--cor3);
+    color: var(--cor6); 
+}
+
+
+/*para nao deixar tudo junto a lista dos meus cursos*/
+.cursos {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.cursos li {
+    margin-bottom: 6px;
+}
+
+
+
+/*usei wrap para quebrar caso o texto nao couber*/
+.apresentacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+/*p preencher melhor o espaço(ocupar o disponivel)*/
+.apresentacao .texto {
+    flex: 1; 
+}
+
+
+
+
+.foto {
+    /*deixei em 100 para garantir q nao utrapasse, e uma leve borda*/
+    width: 450px; 
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+
+/* meu nome */
+span {
+    color: rgba(0, 0, 0, 0.495);
+}
+
+/* empurra para o final pois tenho pouco conteudo*/
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--cor6);
+    margin-top: auto; 
+}
+
+/*para smartphone/tables deixar o texto acima da img*/
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .apresentacao .texto {
+        flex: none;
+    }
+
+    .apresentacao .imagem {
+        margin-top: 20px;
+    }
+}
+
+
+/*configuraçoes do formulario*/
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.form-contato label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.form-contato input, textarea {
+    padding: 5px;
+    border: 1px solid var(--cor4);
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-contato button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--cor2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-contato button:hover {
+    background-color: var(--cor6);
+}
